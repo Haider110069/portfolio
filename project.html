@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="style1.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: poppins, sans-serif;
+        font-style: italic;
+    }
+
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 20px 10%;
+        background-color: transparent;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 100;
+        background-color: #08225f;
+    }
+
+    .logo {
+        color: #fff;
+        font-size: 25px;
+    }
+
+    .nav a {
+        font-size: 18px;
+        color: #fff;
+        text-decoration: none;
+        font-weight: 500;
+        margin-left: 35px;
+        transition: .3s;
+    }
+
+    .nav a:hover {
+        color: #00abf0;
+    }
+
+    .h2 {
+        color: #08225f;
+        font-size: 60px;
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+
+    .card {
+        transition: transform 0.3s;
+        padding: 20px;
+        width: 30%; /* Adjust the width as needed */
+        margin: 0;
+    }
+
+    .card:hover {
+        transform: scale(1.05);
+    }
+
+    .card body {
+        color: #fff;
+        background-color: #fff;
+        font-size: 12px;
+    }
+
+    .card body h4, p {
+        color: #08225f;
+        font-size: 12px;
+    }
+
+    .btn {
+        padding: 12px 35px;
+        background: transparent;
+        border-radius: 40px;
+        font-size: 15px;
+        color: #00abf0;
+        text-decoration: none;
+        font-weight: 600;
+        letter-spacing: 1px;
+        border: 2px solid #08225f;
+    }
+
+    .btn:hover {
+        background: #00abf0;
+        color: #fff;
+        border-color: #00abf0;
+        box-shadow: 0 0 10px #00abf0;
+    }
+
+    @media screen and (max-width: 768px) {
+        header {
+            margin-top: 25px;
+            padding: 15px 5%;
+        }
+
+        .logo {
+            font-size: 20px;
+        }
+
+        .nav {
+            margin-right: -14px;
+        }
+
+        .nav a {
+            font-size: 15px;
+            margin-left: 14px;
+        }
+
+        .h2 {
+            font-size: 30px;
+        }
+
+        .container {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .card {
+            width: 80%;
+            margin-bottom: 30px;
+        }
+
+        .card-body h4, .card-body p {
+            font-size: 14px;
+        }
+
+        .btn {
+            padding: 10px 25px;
+            font-size: 12px;
+            margin-left: 0;
+        }
+    }
+  </style>
+</head>
+<body>
+    <div class="main">  
+        <header>
+            <h3  class="logo">C. Olive</h3>
+            <nav class="nav">
+                <a href="index.html">Home</a>
+                <a href="About.html">About</a>
+                <a href="Services.html">Services</a>
+                <a href="">Portfolio</a>
+                <a href="Contact US .html">Contact</a>
+            </nav>
+        </header>
+        <br><br><br><br><br><center><h2 class="h2">Projects</h2><br><br><br></center>
+        <div class="container mt-3">
+            <div class="card" style="display: inline-block; margin-right: 25px;border: 25px solid #08225f;outline: 10px solid #fff">
+              <img class="card-img-top" src="Capture.JPG" alt="Card image" style="width: 100%; ">
+              <div class="card-body">
+                <br>
+                <center><h4 class="card-title"><b>Style Sculpt</b></h4>
+                    <br>
+                <a href="https://haider110069.github.io/Project/" class="btn btn-info">open Website</a></center>
+              </div>
+              <br>
+            </div>
+            
+            <!-- <div class="card" style="display: inline-block; margin-right: 25px;border: 25px solid #08225f;outline: 10px solid #fff">
+              <img class="card-img-top" src="images.jpg" alt="Card image" style="width: 100%;">
+              <div class="card-body">
+                <center><h4 class="card-title">Backend Developer</h4>
+                <p class="card-text">With my expertise in Backend Development, I focus on building robust and scalable server-side applications.I have experience working with PHP And Mysql languages</p>
+                <center><a href="https://www.coursera.org/articles/back-end-developer" class="btn btn-info">See Profile</a></center>
+              </div>
+            </div>
+            <div class="card" style="display: inline-block; margin-right: 25px;border: 25px solid #08225f;outline: 10px solid #fff">
+              <img class="card-img-top" src="uiux1.jpg" alt="Card image" style="width: 100%;">
+              <div class="card-body">
+                <center><h4 class="card-title">UI/UX Developer</h4>
+                <p class="card-text">As a UI/UX Developer, I combine my technical skills with a deep understanding of user-centered design principles to create intuitive and visually appealing interfaces. </p>
+                <a href="https://flatironschool.com/blog/what-is-ux-ui-design/" class="btn btn-info">See Profile</a></center>
+              </div>
+            </div>
+        </div> -->
+</body>
+</html>
