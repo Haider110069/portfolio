@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="style1.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            font-style: italic;
+        }
+
+        .container {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            height: 100vh;
+            width: 100%;
+            padding-left: 420px;
+            text-align: left;
+        }
+
+        .contact-container {
+            max-width: 800px;
+            border-radius: 15px;
+            margin-left: 100px;
+        }
+
+        .contact-container h2 {
+            font-size: 30px;
+            color: #fff;
+            margin-bottom: 10px;
+            margin-left: 44px;
+        }
+
+        .contact-container p {
+            font-size: 15px;
+            color: #fff;
+            text-align: center;
+            margin-left: 44px;
+        }
+
+        .input-column {
+            display: flex;
+            justify-content: space-between;
+            gap: 120px;
+        }
+
+        .input-group {
+            flex: 3;
+        }
+
+        .input-group label {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .input-group input,
+        .input-group textarea {
+            width: 140%;
+            padding: 30px;
+            border-radius: 10px;
+            border: 1px solid #08225f;
+            font-size: 15px;
+        }
+
+        .input-group textarea {
+            resize: none;
+            width: 116%;
+            height: 180px;
+        }
+
+        .submit-btn {
+            padding: 12px 35px;
+            background: transparent;
+            border-radius: 40px;
+            font-size: 17px;
+            color: #00abf0;
+            text-decoration: none;
+            font-weight: 600;
+            letter-spacing: 1px;
+            border: 2px solid #fff;
+            cursor: pointer;
+            margin-left: 36px;
+        }
+
+        .submit-btn:hover {
+            background: #00abf0;
+            color: #fff;
+            border-color: #00abf0;
+            box-shadow: 0 0 10px #00abf0;
+        }
+
+        .con {
+            height: 110vh;
+            background: linear-gradient(to left, #08225f 65%, #fff 25%);
+            display: flex;
+            justify-content: space-between;
+            padding: 0 10%;
+            align-items: center;
+        }
+
+        @media screen and (max-width: 768px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    .contact-container {
+        max-width: 100%;
+        padding: 20px;
+        border-radius: 10px;
+        margin-top: 50px;
+        height: auto; 
+    }
+
+    .contact-container h2 {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .contact-container p {
+        font-size: 12px;
+        margin-left: 10px; 
+        text-align: center;
+    }
+
+    .input-column {
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+
+    .input-group label {
+        font-size: 14px;
+        text-align: left;
+        margin-left: 0;
+    }
+
+    .input-group input,
+    .input-group textarea {
+        width: 100%;
+        padding: 10px;
+        font-size: 12px;
+        margin-left: 0; 
+        width: 250px;
+    }
+
+    .input-group textarea {
+        height: 100px;
+    }
+
+    .submit-btn {
+        padding: 10px 20px;
+        font-size: 12px;
+        margin-left: 0;
+        text-align: center;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+    <div class="home">
+        <header>
+            <a href="" class="logo">C. Olive</a>
+            <nav class="nav">
+                <a href="index.html">Home</a>
+                <a href="About.html">About</a>
+                <a href="Services.html">Services</a>
+                <a href="">Portfolio</a>
+                <a href="Contact US .html">Contact</a>
+            </nav>
+        </header>
+        <div class="container">
+            <div class="right right-aligned">
+            </div>
+            <div class="contact-container">
+                <center>
+                  <br>
+                    <h2>Contact Us</h2>
+                </center>
+                <p>For questions, please fill out the form.</p>
+                <form>
+                    <div class="input-column">
+                        <div class="input-group"><br>
+                            <input type="text" id="name" placeholder="Enter your name" required>
+                        </div>
+                        <div class="input-group"><br>
+                            <input type="email" id="email" placeholder="Enter your email" required>
+                        </div>
+                    </div>
+                    <div class="input-column">
+                        <div class="input-group"><br>
+                            <input type="text" id="phone" placeholder="Enter your phone number" required>
+                        </div>
+                        <div class="input-group"><br>
+                            <input type="text" id="subject" placeholder="Enter the subject" required>
+                        </div>
+                    </div>
+                    <div class="input-group"><br>
+                        <textarea id="message" placeholder="Enter your message" required></textarea>
+                    </div>
+                    <center><button type="submit" class="submit-btn">Send Message</button></center>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

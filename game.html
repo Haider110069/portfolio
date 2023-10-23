@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Endless Runner Game</title>
+  <link rel="stylesheet" type="text/css" href="game.css">
+</head>
+<body>
+  <div id="game-container">
+    <img id="character" src="images-removebg-preview.jpg">
+  </div>
+  
+  <script src="game.js"></script>
+</body>
+</html>
+<script>
+const character = document.getElementById('character');
+let characterPosition = 0;
+let score = 0;
+let isGameOver = false;
+
+function handleKeyDown(event) {
+  if (event.code === 'ArrowRight') {
+    moveCharacter('right');
+  } else if (event.code === 'ArrowLeft') {
+    moveCharacter('left');
+  }
+}
+
+function moveCharacter(direction) {
+  if (isGameOver) return;
+
+  const containerWidth = document.getElementById('game-container').offsetWidth;
+  const characterWidth = character.offsetWidth;
+  const maxPosition = containerWidth - characterWidth;
+
+  if (direction === 'right') {
+    characterPosition += 20;
+    if (characterPosition > maxPosition) {
+      characterPosition = maxPosition;
+    }
+  } else if (direction === 'left') {
+    characterPosition -= 20;
+    if (characterPosition < 0) {
+      characterPosition = 0;
+    }
+  }
+
+  character.style.left = characterPosition + 'px';
+}
+
+function startGame() {
+  setInterval(moveBackground, 30);
+  setInterval(updateScore, 100);
+  setInterval(checkCollision, 10);
+  generateObstacle();
+}
+
+function moveBackground() {
+  const gameContainer = document.getElementById('game-container');
+  gameContainer.style.backgroundPositionY = parseInt(getComputedStyle(gameContainer).backgroundPositionY) - 1 + 'px';
+}
+
+function generateObstacle() {
+  if (isGameOver) return;
+
+  const obstacle = document.createElement('div');
+  obstacle.classList.add('obstacle');
+  obstacle.style.left = Math.random() * (document.getElementById('game-container').offsetWidth - 20) + 'px';
+
+  document.getElementById('game-container').appendChild(obstacle);
+
+  setTimeout(() => {
+    obstacle.remove();
+    generateObstacle();
+  }, 3000);
+}
+
+function updateScore() {
+  if (isGameOver) return;
+
+  score++;
+  document.getElementById('score').textContent = score;
+}
+
+function checkCollision() {
+  if (isGameOver) return;
+
+  const obstacles = document.getElementsByClassName('obstacle');
+
+  for (let obstacle of obstacles) {
+    if (isColliding(obstacle, character)) {
+      endGame();
+      break;
+    }
+  }
+}
+
+function isColliding(element1, element2) {
+  const rect1 = element1.getBoundingClientRect();
+  const rect2 = element2.getBoundingClientRect();
+
+  return !(
+    rect1.top > rect2.bottom ||
+    rect1.right < rect2.left ||
+    rect1.bottom < rect2.top ||
+    rect1.left > rect2.right
+  );
+}
+
+function endGame() {
+  isGameOver = true;
+  alert('Game Over! Your score: ' + score);
+}
+
+document.addEventListener('keydown', handleKeyDown);
+startGame();
+</script>

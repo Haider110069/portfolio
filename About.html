@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: poppins , sans-serif;
+            font-style: italic;
+        }
+        header{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 10%;
+            background-color: transparent;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+        }
+        .logo{
+            font-size: 25px;
+            color: #08225f;
+            text-decoration: none;
+            font-weight: 700;
+        }
+        .nav a{
+            font-size: 18px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            margin-left: 35px;
+            transition: .3s;
+        }
+        .nav a:hover{
+            color: #00abf0;
+        }
+        .home{
+            height: 100vh;
+            background: linear-gradient(to left,#08225f 65% ,#fff 25% );
+            display: flex;
+            justify-content: space-between;
+            padding: 0 10%;
+            align-items: center;
+        }
+        .home-image{
+    display: flex;
+    justify-content: center;
+width: 350px;
+height: 350px;
+background: #08225f;
+border-radius: 50%;
+align-items: center;
+margin-left: auto;
+border: 50px solid #fff;
+outline: 40px solid #08225f;
+}
+.home-image img{
+width: 300px;
+position: fixed;
+
+}
+        .home-Content {
+            max-width: 600px;
+            color: #fff;
+            margin-left: auto;
+            text-align: right;
+        }
+        .home-Content h2{
+            font-size: 50px;
+            line-height: 1.2;
+            -webkit-text-stroke: .5px #fff;
+            font-style: italic;
+        }
+        .home-Content p{
+            font-size: 13px;
+            margin-top: 20px;
+            text-align: left ;
+            line-height: 1.2;
+            font-style: italic;
+        }
+        .home-sci {
+            margin:25px 0 40px; 
+        }
+        .home-sci a{
+            justify-content: center;
+            align-items: center;
+            display: inline-flex; 
+            width: 40px;
+            height: 40px;
+            background: transparent;
+            border: 2px solid #fff;
+            border-radius: 50px;
+            font-size: 20px;
+            color: #00abf0;
+            text-decoration: none;
+            margin-left: 12px;
+            transition: .5s;
+        }
+        .home-sci a:hover{
+            background: #00abf0;
+            color: #fff;
+            border-color: #00abf0;
+            box-shadow: 0 0 10px #00abf0;
+        }
+        @media Screen and (max-width: 768px){
+            header{
+                margin-top: 25px;   
+            }
+            .logo{
+                font-size: 16px;
+                color: #08225f;
+                text-decoration: none;
+                font-weight: 200;
+            }
+            .nav{
+                margin-right: -14px;
+            }
+            .nav a{
+                font-size: 15px;
+                color: #fff;
+                text-decoration: none;
+                font-weight: 50;
+                margin-left: 14px;
+            }
+            .home{
+                background: linear-gradient(to left,#08225f 75% ,#fff 25% );
+                height: 100vh;
+            }
+            
+            .home-Content h2{
+                font-size: 33px;
+                text-align: center;
+                margin-left: 80px;
+                margin-bottom: 15px;
+            }
+            .home-image{
+                display: none;
+            }
+    .home-image img{
+        display: none;
+    }
+            .home-Content p{
+                font-size: 10px;
+                margin-left: 120px;
+            }
+            .home-sci a{
+                width: 28px;
+                height: 28px;
+                border: 1px solid #fff;
+                margin-bottom: -5px;
+            }
+            .home-sci {
+                margin:25px 0 40px; 
+                margin-right: 9px;
+                margin-left: 50px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="" class="logo">C.Olive</a>
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="About.html">About</a>
+            <a href="Services.html">Services</a>
+            <a href="">Portfolio</a>
+            <a href="">Contact</a>
+        </nav>
+    </header>
+    <section class="home">
+        <div class="home-image">
+            <img src="imgonline-com-ua-shape-7cAYLrrgAXAUGe.png" alt="">
+        </div>
+        <div class="home-Content">
+            <center><h2>About</h2></center>
+            <p>Welcome to My Portfolio! I am a passionate and dedicated I strive to create stunning and impactful digital experiences.I bring ideas to life and help Myclients achieve their goals.
+            I believe that great design and technology can transform businesses and make a lasting impression.My mission is to deliver innovative solutions that not only meet our clients'.
+            Client satisfaction is at the heart of everything we do. I believe in building long-term relationships with our clients, becoming their trusted partners throughout their digital journey
+            Our transparent and open communication ensures that our clients are involved at every stage of the process, from initial concept to final implementation.
+            Whether you need a visually stunning website, a user-friendly mobile app, or a comprehensive branding strategy, we are here to turn your ideas into reality. Our portfolio showcases some of our best work, which reflects our passion for excellence and our commitment to delivering exceptional results.
+            Thank you for considering me for your next project. We look forward to collaborating with you and creating something extraordinary together.</p>
+            <center><div class="home-sci">
+                <a href=""><i class='bx bxl-facebook'></i></a>
+                <a href=""><i class='bx bxl-twitter' ></i></a>
+                <a href="https://www.instagram.com/haider_arena/"><i class='bx bxl-instagram' ></i></a>
+                <a href=""><i class='bx bxl-linkedin' ></i></a>
+            </div></center>
+        </div>
+    </section>
+</body>
+</html>
